@@ -22,37 +22,7 @@
                     NK INFRA
                 </h1>
             </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-body">
-                        <form id="form">
-                            <input type="hidden" name="id" id="id">
-                            <label for="">VEHICLE NUMBER</label>
-                            <input type="text" placeholder="VEHICLE NUMBER" class="form-control" name="name" id="name" required>
-                            <br>
-                            <label for="">FC DUE DATE</label>
-                            <input type="date" placeholder="DATE" class="form-control" name="fc_date" id="fc_date" required>
-                            <br>
-                            <br>
-                            <label for="">INSURANCE DUE DATE</label>
-                            <input type="date" placeholder="DATE" class="form-control" name="insu_date" id="insu_date" required>
-                            <br>
-                            <label for="">ROAD  TAX DUE DATE</label>
-                            <input type="date" placeholder="DATE" class="form-control" name="tax_date" id="tax_date" required>
-                            <br>
-                            <label for="">POLUTION DUE DATE </label>
-                            <input type="date" placeholder="DATE" class="form-control" name="polu_date" id="polu_date" required>
-                            <br>
-                            <label for="">PERMIT DUE DATE </label>
-                            <input type="date" placeholder="DATE" class="form-control" name="permit_date" id="permit_date" required>
-                            <br>
-                            
-                            <button class="btn btn-sm btn-primary" type="button" onclick="save()">Save</button>
-                            <button class="btn btn-sm btn-primary" type="button" onclick="clearData()">Reset</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            
             <div class="table-responsive">
                 <div class="card">
                     <div class="card-body">
@@ -67,20 +37,91 @@
                                         <th class="col-md-auto">ROAD_TAX_DUEDATE</th>
                                         <th class="col-md-auto">POLUTION_DUE_DATE</th>
                                         <th class="col-md-auto">PERMIT_TAX_DUE_DATE</th>
+                                        <th class="col-md-auto">OIL_SERVICE_DUE_KM</th>
+                                        <th class="col-md-auto">WEEL_GREASE_DUE_KM</th>
+                                        <th class="col-md-auto">REDIATOR_SERVICE&COOLENT_CHANGE_KM</th>
+                                        <th class="col-md-auto">CROWN_OIL_CHANGE_DUE</th>
+                                        <th class="col-md-auto">GEAR_OIL_CHANGE_DUE_KM</th>
+                                        <th class="col-md-auto">FRONT_1_AXLE_TYRE_CHANGE_DUE</th>
+                                        <th class="col-md-auto">FRONT_2_AXLE_TYRE_CHANGE_DUE</th>
+                                        <th class="col-md-auto">REAR_1_AXLE_TYRE_CHANGE_DUE</th>
+                                        <th class="col-md-auto">REAR_2_AXLE_TYRE_CHANGE_DUE</th>
                                         <th >Edit</th>
-                                        <th>Delete</th>
+                                        <th>DELETE</th>
                                     </tr>
                                 </thead>
                                 <tbody id="table">
         
                                 </tbody>
                             </table>
+                           
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <form id="form">
+                        <input type="hidden" name="id" id="id">
+                        <label for="">VEHICLE NUMBER</label>
+                        <input type="text" placeholder="VEHICLE NUMBER" class="form-control" name="name" id="name" required>
+                        <br>
+                        <label for="">FC DUE DATE</label>
+                        <input type="date" placeholder="DATE" class="form-control" name="fc_date" id="fc_date" required>
+                        <br>
+                        <label for="">INSURANCE DUE DATE</label>
+                        <input type="date" placeholder="DATE" class="form-control" name="insu_date" id="insu_date" required>
+                        <br>
+                        <label for="">ROAD  TAX DUE DATE</label>
+                        <input type="date" placeholder="DATE" class="form-control" name="tax_date" id="tax_date" required>
+                        <br>
+                        <label for="">POLUTION DUE DATE </label>
+                        <input type="date" placeholder="DATE" class="form-control" name="polu_date" id="polu_date" required>
+                        <br>
+                        <label for="">PERMIT DUE DATE </label>
+                        <input type="date" placeholder="DATE" class="form-control" name="permit_date" id="permit_date" required>
+                        <br>
+                        <label for="">OIL SERVICE DUE KM </label>
+                        <input type="number" placeholder="NEX OIL SERVICE" class="form-control" name="oil_km" id="oil_km" required>
+                        <br>
+                        <label for="">WEEL GREASE DUE KM </label>
+                        <input type="number" placeholder="WEEL GREASE KM" class="form-control" name="grease_km" id="grease_km" required>
+                        <br>
+                        <label for="">REDIATOR SERVICE & COOLENT CHANGE KM </label>
+                        <input type="number" placeholder="REDIATOR SERVICE&COOLENT CHANGE KM" class="form-control" name="redi_km" id="redi_km" required>
+                        <br>
+                        <label for="">CROWN OIL CHANGE DUE </label>
+                        <input type="number" placeholder="CROWN OIL CHANGE DUE" class="form-control" name="crown_km" id="crown_km" required>
+                        <br>
+                        <label for="">GEAR OIL CHANGE DUE KM </label>
+                        <input type="number" placeholder="GEAR OIL CHANGE KM" class="form-control" name="gear_km" id="gear_km" required>
+                        <br>
+                        <label for=""> FRONT 1-AXLE TYRE CHANGE DUE </label>
+                        <input type="number" placeholder=" FRONT 1-AXLE TYRE CHANGE DUE" class="form-control" name="f1_km" id="f1_km" required>
+                        <br>
+                        <label for=""> FRONT 2-AXLE TYRE CHANGE DUE </label>
+                        <input type="number" placeholder=" FRONT 2-AXLE TYRE CHANGE DUE" class="form-control" name="f2_km" id="f2_km" required>
+                        <br>
+                        <label for=""> REAR 1-AXLE TYRE CHANGE DUE </label>
+                        <input type="number" placeholder=" REAR 1-AXLE TYRE CHANGE DUE" class="form-control" name="r1_km" id="r1_km" required>
+                        <br>
+                        <label for=""> REAR 2-AXLE TYRE CHANGE DUE </label>
+                        <input type="number" placeholder=" REAR 2-AXLE TYRE CHANGE DUE" class="form-control" name="r2_km" id="r2_km" required>
+                        <br>
+                        <button class="btn btn-sm btn-primary" type="button" onclick="save()">Save</button>
+                        <button class="btn btn-sm btn-primary" type="button" onclick="clearData()">Reset</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
     </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
     <script src="all_data.js"></script>
@@ -96,5 +137,14 @@
             document.getElementById('id').value = ""
         }
     </script>
+<div class="container mt-4">
+    <div class="col-lg-12">
+        <br>
+        <br>
+        <h3 class="alert alert-primary text-center">
+            This website is under construction & it only for study purpose
+        </h3>
+    </div>
+ </div>
   </body>
 </html>
