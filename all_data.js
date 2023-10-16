@@ -20,7 +20,17 @@
                     <td>${value.insu_date}</td>
                     <td>${value.tax_date}</td>
                     <td>${value.polu_date}</td>
-                    <td>${value.permit_date}</td>
+                    <td >${value.permit_date}</td>
+                    <td >${value.oil_km}</td>
+                    <td >${value.grease_km}</td>
+                    <td >${value.redi_km}</td>
+                    <td >${value.crown_km}</td>
+                    <td >${value.gear_km}</td>
+                    <td >${value.f1_km}</td>
+                    <td >${value.f2_km}</td>
+                    <td >${value.r1_km}</td>
+                    <td >${value.r2_km}</td>
+
                     <td>
                         <button class="btn btn-sm btn-success" onclick="find(${value.id})">
                             <i class="fa fa-edit"></i>
@@ -34,3 +44,4 @@
                 </tr>`
         })
     }
+   
